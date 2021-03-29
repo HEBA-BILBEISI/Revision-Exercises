@@ -66,19 +66,42 @@ Write a javaScript function that compute the sum of the numbers in an array, usi
 7
 Write a javaScript function that concatenates two arrays
 ** DON'T use any built-in functions**
-*/
-
+*/    //copy Code
+const tips_differenceBy = (x, y, fn) => {
+    const z = new Set(y.map(fn));
+    return x.map(fn).filter(el => !z.has(el));
+  };
+  
+  console.log(tips_differenceBy([3.1, 1.5], [3.3, 3.8], Math.floor));
+  console.log(tips_differenceBy([{ x: 3 }, { x: 2 }], [{ x: 2 }], v => v.x));
 /*
 8
 Write a javaScript function that sorts an array
 ** DON'T use any built-in functions**
 */
 
+<p id="demo"></p>
+
+
+var names = ["heba", "jenan", "ayah", "angham"];
+document.getElementById("demo").innerHTML = names;
+
+function myFunction() {
+  names.sort();
+  document.getElementById("demo").innerHTML = nemes;
+}
+
+
+
 /*
 9
 Write a javaScript function that sorts an array
 ** DON'T use any built-in functions**
 */
+var food = "Mansf ,Moklohyah ,Kabseh"
+food.sort();
+console.log(food);
+
 
 /*
 10
@@ -87,6 +110,23 @@ Write a javaScript function that sorts an array
 let numbers = [8, 0, 1, 5, 3];
 >>>>> Result: [0, 1, 3, 5, 8];
 */
+
+{/* <button onclick="myFunction()">Check</button>
+
+<p id="demo"></p>
+
+<script>
+let numbers = [8, 0, 1, 5, 3];
+document.getElementById("demo").innerHTML = numbers;
+
+function myFunction() {
+  points.sort(function(a, b));
+  document.getElementById("demo").innerHTML = numbers[0];
+}
+</script>
+
+ */}
+
 
 /*
 11
@@ -100,11 +140,18 @@ let numbers = [10, 5, 3, 8, 1, 6, 9];
 >>>>> Result:   Even numbers [10, 8, 6]
                 Odd numbers [5, 3, 1, 9]
 */
+for (var x=0; x<=10; x++) {
+    if (x === 0) {
+            console.log(x +  " is even");
+    }
+    else if (x % 2 === 0) {
+            console.log(x + " is even");   
+    }
+    else {
+            console.log(x + " is odd");
+    }
+}
 
-/*
-13
-Write a javaScript function that calculates the factorial of any number
-*/
 
 /*
 14
